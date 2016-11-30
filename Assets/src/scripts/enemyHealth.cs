@@ -1,29 +1,46 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyHealth : MonoBehaviour {
+public class EnemyHealth : MonoBehaviour
+{
     [SerializeField]
-    private int HealthPoints;
-    private int MinHP = 0;
-    private int MaxHP = 100;
-    private Targeting targeting;
+    private int healthPoints;
+    private int minHP = 0;
+    private int maxHP = 100;
+
+    public int HealthPoints
+    {
+        get { return healthPoints; }
+
+        set { healthPoints = value; }
+    }
 
 
     // Use this for initialization
-    void Start () {
-        Targeting targeting = GetComponent<Targeting>();
-        HealthPoints = MaxHP;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+    void Start()
+    {
+
+        healthPoints = maxHP;
+    }
+
+    public void TakeDamage(int amount)
+    {
+        healthPoints -= amount;
+        CheckHealth();
+    }
+
+    void CheckHealth()
+    {
+        if (healthPoints < 0)
         {
-            HealthPoints -= 50;
+            Die();
         }
-        if (HealthPoints <= MinHP)
-        {
-            Destroy(gameObject);
-        }
-	}
+    }
+
+    void Die()
+    {
+        Destroy(this.gameObject);
+        EnemyTargeting enemyTargeting = GetComponent<EnemyTargeting>();
+        enemyTargeting.RemoveTarget(transform);
+    }
 }
