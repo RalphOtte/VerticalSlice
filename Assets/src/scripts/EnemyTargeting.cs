@@ -110,7 +110,7 @@ public class EnemyTargeting : MonoBehaviour {
 
     public void RemoveTarget(Transform enemy)
     {
-        Enemies.RemoveAll(enemy);
+        //Enemies.RemoveAll(enemy);
     }
 
 }

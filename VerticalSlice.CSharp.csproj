@@ -63,7 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\src\scripts\ActionSelection.cs" />
     <Compile Include="Assets\src\scripts\ActionTimer.cs" />
+    <Compile Include="Assets\src\scripts\BattleSystemCoordinator.cs" />
     <Compile Include="Assets\src\scripts\CharacterData.cs" />
     <Compile Include="Assets\src\scripts\Enemy.cs" />
     <Compile Include="Assets\src\scripts\EnemyHealth.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="Assets\src\scripts\FireflyMovement.cs" />
     <Compile Include="Assets\src\scripts\FireflySlowing.cs" />
     <Compile Include="Assets\src\scripts\MainCharacter.cs" />
+    <Compile Include="Assets\src\scripts\data\BattleTimer.cs" />
     <Compile Include="Assets\src\scripts\data\SkillData.cs" />
     <Compile Include="Assets\src\scripts\data\enemyAttack.cs" />
   </ItemGroup>

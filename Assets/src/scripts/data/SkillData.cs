@@ -1,38 +1,46 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
-public enum Skills
+public enum SkillCategories
 {
-    NormalAttack,
-    Defend,
-    Starlight
-
+    Offensive,
+    Defensive,
+    Magic
 }
 
-public class SkillData {
-
-    private Dictionary<Skills, float> actionTimeData = new Dictionary<Skills, float>();
+public class Skill {
 
     private string name;
-    private Skills skill;
+    private SkillCategories skill;
     private float skillTime;
-
-    public SkillData(string name, Skills skill, float skillTime)
-    {
-        this.name = name;
-        this.skill = skill;
-        this.skillTime = skillTime;
-    }
+    private float cost;
 
     public string Name
     {
         get {return name; }
     }
 
-    public Skills Skill
+    public SkillCategories SkillCategory
     {
         get { return skill; }
+    }
+
+    public float Skilltime
+    {
+        get { return skillTime; }
+    }
+
+    public float Cost
+    {
+        get { return cost; }
+    }
+
+    public Skill(string name, SkillCategories category, float skillTime)
+    {
+        this.name = name;
+        this.skill = skill;
+        this.skillTime = skillTime;
+        this.cost = cost;
     }
 
    
