@@ -9,15 +9,15 @@ public class ActionSelection : MonoBehaviour {
         CharacterData characterData = GetComponent<CharacterData>();
         if (characterData.RemainingTimeForAction <= 0)
         {
-            CreateButtons();
+            OnGUI();
         }
 	}
 
-    void CreateButtons()
+    void OnGUI()
     {
         if (GUI.Button(new Rect(100, 100, 100, 100), "Derp"))
         {
-
+ 
         }
     }
 
