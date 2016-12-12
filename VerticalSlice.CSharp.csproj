@@ -63,19 +63,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\src\scripts\ActionSelection.cs" />
-    <Compile Include="Assets\src\scripts\ActionTimer.cs" />
-    <Compile Include="Assets\src\scripts\BattleSystemCoordinator.cs" />
-    <Compile Include="Assets\src\scripts\CharacterData.cs" />
-    <Compile Include="Assets\src\scripts\Enemy.cs" />
-    <Compile Include="Assets\src\scripts\EnemyHealth.cs" />
-    <Compile Include="Assets\src\scripts\EnemyTargeting.cs" />
-    <Compile Include="Assets\src\scripts\FireflyMovement.cs" />
-    <Compile Include="Assets\src\scripts\FireflySlowing.cs" />
-    <Compile Include="Assets\src\scripts\MainCharacter.cs" />
-    <Compile Include="Assets\src\scripts\data\BattleTimer.cs" />
-    <Compile Include="Assets\src\scripts\data\SkillData.cs" />
-    <Compile Include="Assets\src\scripts\data\enemyAttack.cs" />
+    <Compile Include="Assets\Script\CharacterData.cs" />
+    <Compile Include="Assets\Script\Enemy.cs" />
+    <Compile Include="Assets\Script\EnemyHealth.cs" />
+    <Compile Include="Assets\Script\EnemyTargeting.cs" />
+    <Compile Include="Assets\Script\FireFlyMovement.cs" />
+    <Compile Include="Assets\Script\FireflySlowing.cs" />
+    <Compile Include="Assets\Script\FloatingTextController.cs" />
+    <Compile Include="Assets\Script\Floatingtext.cs" />
+    <Compile Include="Assets\Script\InstantiateDmgPopup.cs" />
+    <Compile Include="Assets\Script\Menu.cs" />
+    <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Script\Skillanimation.cs" />
+    <Compile Include="Assets\Script\TimeManager.cs" />
+    <Compile Include="Assets\Script\UI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
